@@ -30,7 +30,7 @@ Nightshift Tools is a web application built with Flask for managing and displayi
 
 # Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/nightshift-tools.git`
+1. Clone the repository: `git clone https://github.com/NsChadmin/Nightshift-Tools-Project.git`
 2. Navigate to the project directory: `cd nightshift-tools`
 3. Install dependencies: `pip install -r requirements.txt`
 
