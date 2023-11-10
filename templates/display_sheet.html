@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Sheet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <style>
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .navbar a {
+            float: none;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/display_sheet">Display Sheets</a>
+        <a href="/view_uploads">View Uploads</a>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <h1 class="my-4">Display Sheet</h1>
+
+        {% if error_message %}
+            <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+            </div>
+        {% else %}
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col">
+                        {% if table_html %}
+                            {{ table_html | safe }}
+                        {% else %}
+                            <p>No data to display.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

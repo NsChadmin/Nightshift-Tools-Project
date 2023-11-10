@@ -1,0 +1,86 @@
+# App Documentation: Data Analysis Tool
+
+## Introduction
+
+Welcome to the Data Analysis Tool documentation. This app is designed to help you quickly process and visualize data using statistical analysis. Whether you're a researcher, analyst, or just curious about your data, this tool provides a user-friendly interface to upload data, generate reports, and interpret meaningful insights.
+
+## Getting Started
+
+To access and use the Data Analysis Tool, follow these steps:
+
+1. Visit our website at [https://nightshift.solutions](https://nightshift.solutions).
+2. Click on the "Login" button to access the app using your registered credentials.
+3. If you're a new user, click on "Sign Up" to create an account.
+
+## Uploading Data
+
+Follow these steps to upload your data and generate reports:
+
+1. Log in to the app using your credentials.
+2. From the dashboard, click on the "Upload Data" button.
+3. Choose the data file you want to analyze (in .xlsx format).
+4. Click "Upload" to submit the file.
+5. The app will process the data and generate a report.
+
+## Interpreting Reports
+
+Generated reports provide valuable insights into your data. Each report includes:
+
+- **Mean value:** The average of the selected data column.
+- **Row count:** The number of rows in the dataset.
+
+## Customization
+
+Customize your data analysis experience:
+
+- Choose the data column for analysis.
+- Adjust the time increment for data analysis (e.g., 5-minute intervals).
+- Customize the appearance of the generated reports using themes and templates.
+
+## Troubleshooting
+
+If you encounter any issues, here are common solutions:
+
+- **Data Not Uploading:** Ensure the data file is in the correct format (.xlsx) and doesn't exceed the size limit.
+- **Incorrect Results:** Double-check your data column selection and time increment settings.
+
+## FAQs
+
+**Q: Can I upload other file formats besides .xlsx?**  
+A: Currently, only .xlsx files are supported for data uploads.
+
+**Q: How often is the data updated in the reports?**  
+A: The reports show data in the specified time increment (e.g., 5-minute intervals) based on the uploaded data.
+
+## Explaining Statistical Information
+
+The "Mean Value" represents the average of the selected data column, while "Row Count" shows the number of data points in the dataset. These statistics provide insights into the central tendency and size of the dataset.
+
+## Use Cases
+
+- Researchers can use this app to quickly analyze experimental data trends.
+- Analysts can identify patterns in business data to make informed decisions.
+
+## Downloadable Resources
+
+**Sample Data File**
+
+## Formatting and Organization
+
+Documentation is organized into sections for easy navigation. Each section provides clear instructions and explanations.
+
+## Provide Contact Information
+
+For any questions or assistance, please contact our support team at [admin@nightshift.solutions](mailto:admin@nightshift.solutions).
+
+## Versioning
+
+Please note that this documentation corresponds to version 1.0 of the Data Analysis Tool. For updates and changes, refer to the version history.
+
+## Host Documentation
+
+This documentation is hosted on our website at [https://nightshift.solutions](https://nightshift.solutions).
+
+## Regular Updates
+
+We continuously update our app and documentation to enhance user experience and add new features. Stay tuned for future updates!

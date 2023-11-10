@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Nightshifter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <style>
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .navbar a {
+            float: none;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/display_sheet">Display Sheets</a>
+    <a href="/view_uploads">View Uploads</a>
+</div>
+
+<div class="container-fluid">
+    <h1 class="my-4">Uploaded Files</h1>
+
+    <div class="my-4">
+        <h2>Files by Upload Date</h2>
+        <div class="list-group">
+            {% for date, files in files_by_date.items() %}
+                <a href="#" class="list-group-item list-group-item-action">
+                    <h5 class="mb-1">{{ date }}</h5>
+                    <ul>
+                        {% for file in files %}
+                            <li>{{ file }}</li>
+                        {% endfor %}
+                    </ul>
+                </a>
+            {% endfor %}
+        </div>
+        <!-- Move the form outside the loop -->
+        <form action="{{ url_for('display_sheet') }}" method="POST" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-primary">Display Sheet</button>
+        </form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                {% if table_html %}
+                    <div class="table-responsive">
+                        {{ table_html | safe }}
+                    </div>
+                {% else %}
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <!-- Add more headers as needed -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sample Data 1</td>
+                                <td>Sample Data 2</td>
+                                <!-- Add more data rows as needed -->
+                            </tr>
+                        </tbody>
+                    </table>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Graph Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                {% if graph_data %}
+                    <!-- Display graph using Plotly or Matplotlib -->
+                {% else %}
+                    <!-- Display sample graph here -->
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
